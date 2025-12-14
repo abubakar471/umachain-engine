@@ -49,7 +49,7 @@ int main()
 {
 
     httplib::Server server;
-    std::string CLIENT_URL = "http://localhost:3000";
+    std::string CLIENT_URL = std::getenv("CLIENT_URL") ? std::getenv("CLIENT_URL") : "*";
 
     // CORS helper: use CLIENT_URL for more restrictive policy in development
     auto set_cors = [&](httplib::Response &res)

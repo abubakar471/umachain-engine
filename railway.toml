@@ -1,0 +1,5 @@
+[build]
+command = "make"
+
+[start]
+command = "./server"
