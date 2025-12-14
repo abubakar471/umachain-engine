@@ -1,6 +1,19 @@
 [build]
-command = "g++ -std=c++17 src/server.cpp src/blockchain/*.cpp src/crypto/*.cpp src/block/*.cpp src/transaction/*.cpp src/wallet/*.cpp -Iinclude -lssl -lcrypto -o server && chmod +x server"
-
+builder = "nixpacks"
+command = """
+apt-get update &&
+apt-get install -y g++ libssl-dev &&
+g++ -std=c++17 \
+src/server.cpp \
+src/blockchain/*.cpp \
+src/crypto/*.cpp \
+src/block/*.cpp \
+src/transaction/*.cpp \
+src/wallet/*.cpp \
+-Iinclude \
+-lssl -lcrypto \
+-o server
+"""
 
 [start]
-command = "ls -la && pwd"
+command = "./server"
