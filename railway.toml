@@ -2,4 +2,4 @@
 command = "chmod +x start.sh"
 
 [start]
-command = "./server"
+command = "./start.sh"
