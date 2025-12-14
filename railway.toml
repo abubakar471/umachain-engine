@@ -1,5 +1,5 @@
 [build]
-command = "make"
+command = "chmod +x start.sh"
 
 [start]
 command = "./server"
