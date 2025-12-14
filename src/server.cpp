@@ -541,7 +541,10 @@ int main()
     res.set_content(response.dump(), "application/json"); });
 
     std::cout << "Server running on http://localhost:8080\n";
-    server.listen("0.0.0.0", 8080);
 
+    int port = std::getenv("PORT") ? std::stoi(std::getenv("PORT")) : 8080;
+    
+    server.listen("0.0.0.0", port);
+    
     return 0;
 }
