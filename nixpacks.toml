@@ -1,0 +1,10 @@
+[phases.setup]
+aptPkgs = ["g++", "libssl-dev"]
+
+[phases.build]
+cmds = [
+  "g++ -std=c++17 src/server.cpp src/blockchain/*.cpp src/crypto/*.cpp src/block/*.cpp src/transaction/*.cpp src/wallet/*.cpp -Iinclude -lssl -lcrypto -o server"
+]
+
+[start]
+cmd = "./server"
