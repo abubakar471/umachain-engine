@@ -1,5 +1,5 @@
 [build]
-command = "chmod +x start.sh"
+command = "g++ -std=c++17 src/server.cpp src/blockchain/*.cpp src/crypto/*.cpp src/block/*.cpp src/transaction/*.cpp src/wallet/*.cpp -Iinclude -lssl -lcrypto -o server"
 
 [start]
-command = "./start.sh"
+command = "./server"
