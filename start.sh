@@ -1,6 +1,6 @@
 #!/bin/bash
 set -e
 ls -la
-cd src
+cd src/
 ls -la
 ./server
