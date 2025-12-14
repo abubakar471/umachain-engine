@@ -1,5 +1,6 @@
 [build]
-command = "g++ -std=c++17 src/server.cpp src/blockchain/*.cpp src/crypto/*.cpp src/block/*.cpp src/transaction/*.cpp src/wallet/*.cpp -Iinclude -lssl -lcrypto -o server"
+command = "g++ -std=c++17 src/server.cpp src/blockchain/*.cpp src/crypto/*.cpp src/block/*.cpp src/transaction/*.cpp src/wallet/*.cpp -Iinclude -lssl -lcrypto -o server && chmod +x server"
+
 
 [start]
 command = "./server"
